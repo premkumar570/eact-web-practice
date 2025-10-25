@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "permissions": {
+    "always_allow": [
+      {
+        "description": "Read any file in the project",
+        "type": "read",
+        "paths": ["**/*"]
+      },
+      {
+        "description": "Search and grep operations",
+        "type": "grep",
+        "paths": ["**/*"]
+      },
+      {
+        "description": "Run npm scripts (start, build, test)",
+        "type": "bash",
+        "commands": ["npm start", "npm test", "npm run build", "npm run *"]
+      },
+      {
+        "description": "Run git commands for version control",
+        "type": "bash",
+        "commands": ["git status", "git diff", "git add *", "git commit *", "git log *"]
+      }
+    ],
+    "ask_first": [
+      {
+        "description": "Delete any files",
+        "type": "bash",
+        "commands": ["rm *", "rm -rf *"]
+      },
+      {
+        "description": "Install new npm packages",
+        "type": "bash",
+        "commands": ["npm install *", "npm i *", "yarn add *"]
+      },
+      {
+        "description": "Modify package.json",
+        "type": "edit",
+        "paths": ["package.json"]
+      },
+      {
+        "description": "Create new directories",
+        "type": "bash",
+        "commands": ["mkdir *"]
+      },
+      {
+        "description": "Push to remote repository",
+        "type": "bash",
+        "commands": ["git push *"]
+      }
+    ],
+    "never_allow": [
+      {
+        "description": "Delete node_modules or build folders",
+        "type": "bash",
+        "commands": ["rm -rf node_modules", "rm -rf build"]
+      },
+      {
+        "description": "Modify git config",
+        "type": "bash",
+        "commands": ["git config *"]
+      }
+    ]
+  },
+  "notes": [
+    "This permissions file controls what Claude Code can do automatically vs. what requires approval",
+    "Modify these permissions based on your comfort level and project needs"
+  ]
+}
