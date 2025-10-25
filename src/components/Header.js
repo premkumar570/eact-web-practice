@@ -7,8 +7,8 @@ function Header() {
       <div className="header-content">
         <h2>Dashboard</h2>
         <div className="user-info">
-          <span className="user-name">Welcome, User</span>
-          <div className="user-avatar">U</div>
+          <span className="user-name">Welcome, Prem</span>
+          <div className="user-avatar">P</div>
         </div>
       </div>
     </header>
